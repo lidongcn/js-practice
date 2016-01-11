@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>返回一个字符串的子集</title>
+</head>
+<body>
+<p>返回一个字符串的子集</p>
+<script>
+
+    // str.slice(beginSlice[, endSlice])
+
+    function subString(str) {
+        var i = 0, n,
+            len = str.length,
+            subset = [];
+
+        for (i; i < len; i++) {
+
+            for (n = i + 1; n < len + 1; n++) {
+                subset.push(str.slice(i, n));
+            }
+        }
+        return subset;
+    }
+
+    console.log(subString('dong'));
+
+
+</script>
+
+</body>
+</html>

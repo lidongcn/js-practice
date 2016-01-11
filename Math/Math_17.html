@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    计算数组当中数字的和
+</p>
+<script>
+    function sum(input) {
+
+        if (Object.prototype.toString.call(input) !== '[object Array]') {
+            return false;
+        }
+
+        var count = 0,
+                i = 0;
+        for (i; i < input.length; i++) {
+
+            if (isNaN(input[i])) {
+                continue;
+            }
+            count += Number(input[i]);
+        }
+        return count;
+    }
+    console.log(sum([1, 2, 3]));
+    console.log(sum([100, -200, 3]));
+    console.log(sum([1, 2, 'a', 3]));
+</script>
+
+</body>
+</html>

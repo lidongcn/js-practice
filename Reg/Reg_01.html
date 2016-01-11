@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>检查一个字符串的首字母是否为大写</p>
+<script>
+
+//    test,是一个在字符串中测试是否匹配的RegExp方法,它返回true或false.^匹配输入的开始
+
+    function testString(Str) {
+        var regexp = /^[A-Z]/;
+
+        if (regexp.test(Str)){
+            return '该字符串首字母为大写字母';
+        }else {
+            return '该字符串首字母不是大写字母';
+        }
+    }
+    console.log(testString('dong'));
+    console.log(testString('Dong'));
+</script>
+</body>
+</html>

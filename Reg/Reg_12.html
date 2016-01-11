@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>检查一个字符串首字母是否为数字,字母或下划线任一个</p>
+<script>
+
+    var regexp = /^[a-z\d_\-]+$/i;
+
+    console.log(regexp.test('123-123'));
+    console.log(regexp.test('_123-'));
+    console.log(regexp.test('a123-'));
+</script>
+</body>
+</html>

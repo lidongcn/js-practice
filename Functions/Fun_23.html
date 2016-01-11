@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--returns the longest country name as output-->
+<!--两个归并数组的方法reduce()与reduceRight()-->
+<script>
+  function LongestName(country_name) {
+    return country_name.reduceRight(function (lname, country) {
+      return lname.length > country.length ? lname : country;
+    });
+  }
+  console.log(LongestName(["Australia", "Germany", "United States of America"]));
+</script>
+</body>
+</html>

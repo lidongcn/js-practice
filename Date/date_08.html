@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到两个日期之间的差异</title>
+</head>
+<body>
+
+<script>
+
+  // UTC() 方法可根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
+  // Date.UTC(year,month,day,hours,minutes,seconds,ms)
+
+  var dateDiff = function (date1, date2) {
+    dt1 = new Date(date1);
+    dt2 = new Date(date2);
+    return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) / (1000 * 60 * 60 * 24));
+  };
+
+  console.log(dateDiff('04/02/2014', '11/04/2014'));
+  console.log(dateDiff('12/02/2014', '11/04/2014'));
+</script>
+</body>
+</html>

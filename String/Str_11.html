@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忽略大小写的时候字母是否一样</title>
+</head>
+<body>
+<script>
+  function compareStr(str1, str2) {
+
+    var isEqual = str1.toUpperCase() === str2.toUpperCase();
+    return isEqual;
+  }
+
+  console.log(compareStr('abcd', 'AbcD'));
+  console.log(compareStr('ABCD', 'Abce'));
+
+</script>
+
+</body>
+</html>

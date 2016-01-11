@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>判断一个数是整数还是小数</P>
+<script>
+    function numberTest(num) {
+        if (typeof num !== 'number') {
+            return false;
+        }
+        if (Math.floor(num) === num) {
+            return 'It is a whole number.';
+        }
+        return 'Number has a decimal place.';
+    }
+
+    console.log(numberTest(23.55));
+    console.log(numberTest(23));
+</script>
+</body>
+</html>

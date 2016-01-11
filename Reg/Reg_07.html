@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>给一个字符串,计算它当中元音字母的数量</p>
+<script>
+    function vowelsCount(str) {
+        var regexp = /[aoeiu]/gi;
+
+//        console.log(str.match(regexp));
+        return str.match(regexp).length;
+    }
+
+    console.log(vowelsCount('li dong tong xue'));
+</script>
+</body>
+</html>

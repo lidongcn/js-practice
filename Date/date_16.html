@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计算从给定日期到当年开始的天数</title>
+</head>
+<body>
+
+<script>
+  //  86,400,000 is 1 day
+
+  function days_passed(dt) {
+    var current = new Date(dt.getTime());
+    var previous = new Date(dt.getFullYear(), 0, 1);
+
+    return Math.ceil((current - previous+1) / 86400000);
+
+  }
+  console.log(days_passed(new Date(2015, 0, 15)));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>显示出当前的日期和时间</title>
+</head>
+<body>
+<script>
+
+  var today = new Date(),
+      day = today.getDay(),
+      daylist = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  console.log("Today is: " + daylist[day] + ".");
+
+  var hour = today.getHours(),
+      minutes = today.getMinutes(),
+      second = today.getSeconds(),
+      a;
+
+  if (hour > 12) {
+    hour = (hour - 12);
+     a = 'PM';
+  } else {
+     a = 'AM';
+  }
+  console.log("Current time is: " + hour + a + ":" + minutes + ":" + second + ".");
+
+</script>
+</body>
+</html>

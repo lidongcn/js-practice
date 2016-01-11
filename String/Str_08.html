@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>将字符串当中每个单词的首字母大写</title>
+</head>
+<body>
+
+<script>
+
+
+  function capitalize (Str){
+
+    var arr = Str.split(" ");
+    var output = [];
+    for (var i = 0;i<arr.length;i++){
+      output[i] = arr[i].replace(arr[i].charAt(0),arr[i].charAt(0).toUpperCase());
+    }
+    return output.join(" ");
+  }
+
+  console.log(capitalize('js string exercises'));
+
+</script>
+
+</body>
+</html>

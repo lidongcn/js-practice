@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>根据书的状态打印出该书是否已读</p>
+<script>
+    function isReading(obj) {
+        var i = 0, bookInfo;
+
+        for (i; i < obj.length; i++) {
+            bookInfo = "'" + obj[i].title + ' by ' + obj[i].author + "'";
+
+            if (obj[i].readingStatus) {
+                console.log("Already read " + bookInfo);
+            } else {
+                console.log("you still need to read " + bookInfo);
+            }
+        }
+    }
+
+    var library = [
+        {
+            title: 'Bill Gates',
+            author: 'The Road Ahead',
+            readingStatus: true
+        },
+        {
+            title: 'Steve Jobs',
+            author: 'Walter Isaacson',
+            readingStatus: true
+        },
+        {
+            title: 'Mockingjay: The Final Book of The Hunger Games',
+            author: 'Suzanne Collins',
+            readingStatus: false
+        }];
+
+    isReading(library);
+
+
+</script>
+
+</body>
+</html>

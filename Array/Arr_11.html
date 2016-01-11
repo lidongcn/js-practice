@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--Write a JavaScript program to find the sum of squares of a numeric vector.-->
+
+<script>
+  function squares(array) {
+    var sum = 0,
+        i = array.length;
+
+    while (i--)
+      sum += Math.pow(array[i], 2);
+    return sum;
+  }
+
+  alert(squares([0, 1, 2, 3, 4]));
+
+
+</script>
+</body>
+</html>

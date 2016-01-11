@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>检查是否是一个字符串</title>
+</head>
+<body>
+<script>
+  isString = function (input) {
+    if (Object.prototype.toString.call(input) === '[object String]')
+      return true;
+    else
+      return false;
+  };
+  console.log(isString('w3resource'));
+  console.log(isString([1, 2, 4, 0]));
+
+</script>
+
+</body>
+</html>

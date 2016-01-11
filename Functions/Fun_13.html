@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--求一个数的因素-->
+
+<script>
+  function a(num){
+    var factors = [1];
+    for (var i=2;i<=num;i++){
+      if(num%i == 0){
+        factors.push(i);
+      }
+    }
+    return factors;
+  }
+  console.log(a(26));
+</script>
+</body>
+</html>

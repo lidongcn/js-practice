@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>移除数组当中重复的元素</title>
+</head>
+<body>
+
+<script>
+  function removeDuplicates(num) {
+    var out = [];
+    var obj = {};
+
+
+    for (var a = 0; a < num.length; a++) {
+      obj[num[a]] = 0;
+    }
+    for (a in obj) {
+      out.push(a);
+    }
+    return out;
+  }
+
+  var Mynum = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+
+  console.log(Mynum);
+  console.log(removeDuplicates(Mynum));
+
+</script>
+
+</body>
+</html>

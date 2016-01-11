@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--将每个单词的首字母大写并将其输出-->
+<!--方法：将首字母单独取出后大写+数组第2位到末尾的所有项-->
+<script>
+  function upper(str) {
+    var a = str.split(' '), b = [];
+
+    for (var i = 0; i < a.length; i++) {
+      b.push(a[i].charAt(0).toUpperCase() + a[i].slice(1));
+    }
+    return b.join(' ');
+  }
+  console.log(upper("in upper case"));
+</script>
+
+</body>
+</html>

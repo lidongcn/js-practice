@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--接受一个参数并判断它的类型-->
+<script>
+  function judgeType(value) {
+    var types = [Function, Object, RegExp, String, Number, Boolean];
+
+    for (var i = 0; i < types.length; i++) {
+
+      if (value instanceof types[i]) {
+        return types[x];
+      }
+    }
+    return typeof value;
+  }
+
+  console.log(judgeType("ShuYun"));
+  console.log(judgeType(false));
+  console.log(judgeType("123"));
+  console.log(judgeType(123));
+
+</script>
+</body>
+</html>

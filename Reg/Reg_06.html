@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>验证中国的邮政编码</p>
+<script>
+    //邮编为6位数 第一位不为0即可
+    function isZipCode(Str) {
+        var regexp = /^[1-9][\d]{5}$/;
+
+        if (regexp.test(Str)) {
+            return '该邮编符合标准';
+        } else {
+            return '该邮编不规范';
+        }
+    }
+
+    console.log(isZipCode('713100'));
+    console.log(isZipCode('7131'));
+
+</script>
+</body>
+</html>

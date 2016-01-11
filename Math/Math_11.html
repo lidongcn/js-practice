@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    求出一个数组当中的最大公倍数
+</p>
+<script>
+
+    function lcm(numbers) {
+
+        if (Object.prototype.toString.call(numbers) !== '[object Array]'){
+            return false;
+        }
+
+
+        var i = 0, midNum = 0;
+
+        for (; i < numbers.length; i++) {
+            midNum = multiple(midNum, numbers[i]);
+        }
+        return midNum;
+    }
+
+
+
+
+    function multiple(num1, num2) {
+
+        var minNum = Math.min(num1, num2),
+            maxNum = Math.max(num1, num2),
+                 i = 1,
+               mul = 0;
+
+        if (num1 === 0 || num2 === 0) {
+            return maxNum;
+        }
+
+        for (i; i < maxNum; i++) {
+            mul = minNum * i;
+            if (mul % maxNum === 0) {
+                return mul;
+            }
+        }
+    }
+    console.log(lcm([5,10,15,25]));
+
+
+</script>
+
+</body>
+</html>

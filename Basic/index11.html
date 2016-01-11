@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>华氏摄氏温度的转换</title>
+
+</head>
+<body>
+<!--c/5 = (f-32)/9-->
+
+<script>
+  function cTransformF(c) {
+    var cTemp = c;
+    var F = cTemp * 9 / 5 + 32;
+    console.log(cTemp + "is" + F);
+
+  }
+  function fTransformC(f) {
+    var fTemp = f;
+    var C = (fTemp - 32) * 5 / 9;
+    console.log(fTemp + "is" + C);
+  }
+  cTransformF(60);
+  fTransformC(45);
+</script>
+
+</body>
+</html>

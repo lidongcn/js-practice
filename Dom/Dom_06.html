@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body onload="getSize()" onresize="getSize()">
+
+<div id="wh"></div>
+
+<script>
+
+    function getSize() {
+
+        var width = document.getElementById('wh').clientWidth;
+        var height = document.getElementById('wh').clientHeight;
+
+        document.getElementById('wh').innerHTML = "<h1>宽:" + width + "  高:" + height + "</h1>";
+    }
+
+
+</script>
+
+</body>
+</html>

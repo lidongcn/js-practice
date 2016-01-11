@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    The Pythagorean Theorem tells us that the relationship in every right triangle is : c2 = a2 + b2, where c is the
+    hypotenuse and a, b are two legs of the triangle.
+</p>
+<script>
+    function theorem(a, b) {
+
+        if ((typeof a !== 'number') || (typeof b !== 'number')) {
+            return false;
+        }
+        return Math.sqrt(a * a + b * b);
+    }
+
+    console.log(theorem(2, 4));
+    console.log(theorem(3, 4));
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/**
+         * 保存规则 Rules
+         */
+        $scope.saveRules = function () {
+            // 验证表单, 成功后保存
+            validator.validate('tradeForm', function () {
+                Rules.save($scope.param, function (result) {
+                    // 如果保存成功, 重新查询
+                    if (result.success) {
+                        alertMsg.success('保存成功!');
+                        //$scope.getRules($stateParams);
+                        $scope.getByActionCode(function (queryParams) {
+                            $scope.getRules(queryParams);
+                            $scope.getRelations();
+                        });
+
+                    } else {
+                        alertMsg.error('保存失败！原因：' + result.msg);
+                    }
+                });
+            });
+        };
+		
+		  <a class="button-add button-border-add mt2 mb10" ng-click="addRule('up',groups,$index)">添加条件</a>
+		  
+		  <div class="page-desc">
+      <div class="content">
+        <p class="textIndent30">升级功能只能向上升级，不能用于保级或降级。</p>
+
+        <p class="textIndent30">升级功能开启后，若会员符合多个等级的规则，则升级到其中的最高等级。</p>
+
+        <p class="textIndent30">会员有效期到期，且不符合升级条件时，将执行保级规则。</p>
+      </div>
+
+    </div>
+	
+	
+	$scope.openHandle = function (type, status, setting) {
+      //if (setting.mallId === null) {
+      //  return null;
+      //}
+
+      if (status == 'Y') {
+        Confirm({
+          title: '关闭确认',
+          content: '请确定是否关闭积分商城？',
+          clickedClose: true,
+          ok: function () {
+            var _status = status == 'Y' ? 'N' : 'Y';
+            StoresViewsService.saveChange({from: type}, {
+              cardTypeId: $scope.currentCard.cardId,
+              status: _status
+            }, function (result) {
+              if (result.success) {
+                //- 向子控制器传递
+                $scope.$broadcast(type + '-save', 'success');
+                alertMsg.success('执行成功！');
+              } else {
+                alertMsg.error('执行失败！原因：' + result.msg);
+              }
+            });
+          }
+        });
+      } else {
+        Confirm({
+          title: '开启确认',
+          content: '请确定是否开启积分商城？',
+          clickedClose: true,
+          ok: function () {
+            var _status = status == 'Y' ? 'N' : 'Y';
+            StoresViewsService.saveChange({from: type}, {
+              cardTypeId: $scope.currentCard.cardId,
+              status: _status
+            }, function (result) {
+              if (result.success) {
+                //- 向子控制器传递
+                $scope.$broadcast(type + '-save', 'success');
+                alertMsg.success('执行成功！');
+              } else {
+                alertMsg.error('执行失败！原因：' + result.msg);
+              }
+            });
+          }
+        });
+      }
+
+    };
+	
+	
+	
+	
+	
+	$scope.saveSetting = function (type, setting) {
+      setting.desConfirm = type == 'ST' ? '我已阅读上方协议并同意' : '';
+      Confirm({
+        title: '确认保存',
+        content: '请确认是否要保存当前设置',
+        clickedClose: true,
+        ok: function () {
+          StoresViewsService.saveSetting({from: type}, setting,
+            function (result) {
+              if (result.success) {
+                //- 向子控制器传播保存成功信号 执行页面重渲染
+                $scope.$broadcast(type + '-save', 'success');
+                alertMsg.success('保存成功！');
+              } else {
+                alertMsg.error('保存失败！原因：' + result.msg);
+              }
+            }
+          );
+        }
+      });
+    };
+	
+	
+	
+	           //- 声明变量info  保存提示语
+            var info = {
+                title  : '开启确认',
+                content: '请确认是否要打开' + item.action.actionName + '?'
+            };
+
+            if (item.isOpen === 'Y') {
+
+                var info = {
+                    title  : '关闭确认',
+                    content: '请确认是否要关闭' + item.action.actionName + '?'
+                }
+            }
+
+                Confirm({
+                    title: info.title,
+                    content: info.content,
+                    clickedClose: true,
+                    ok: function () {
+                        settingRelation(item);
+                    }
+                });
+        

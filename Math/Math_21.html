@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>将一个值四舍五入到10的倍数</p>
+
+<script>
+    function round5(num) {
+        if (typeof num !== 'number') {
+            return false;
+        }
+        return Math.round(num / 10) * 10;
+    }
+
+    console.log(round5(32));
+    console.log(round5(137));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>计算整数位数</p>
+<script>
+    function digitsCount(n) {
+//        var count = 0;
+
+//        if (n > 1) {
+//            count = 1;
+//        }
+//        var toString = Object.prototype.toString;
+
+//        while (n / 10 >= 1) {
+//            n /= 10;
+//            count++;
+//        }
+
+        //强制类型转换为字符串
+        return String(n).split('').length;
+    }
+    console.log(digitsCount(1234));
+    console.log(digitsCount(1234567));
+</script>
+</body>
+</html>

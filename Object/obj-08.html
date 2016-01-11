@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>create a Clock, The output will come every second</title>
+</head>
+<body>
+<p>每隔一秒打印出当前的时间</p>
+<script>
+    function run() {
+        var curDate = new Date(),
+                hours = curDate.getHours(),
+                minutes = curDate.getMinutes(),
+                seconds = curDate.getSeconds();
+
+        // 调用update.bind(this)会创建一个与update具有相同函数体和作用域的函数
+        // console.log(this == window); // true
+        setInterval(update.bind(this), 1000);
+
+        function update() {
+            seconds += 1;
+            if (seconds >= 60) {
+                minutes++;
+                seconds = 0;
+            }
+            if (minutes >= 60) {
+                hours++;
+                minutes = 0;
+            }
+            if (hours >= 24) {
+                hours = 0;
+            }
+
+            console.log(hours + ":" + minutes + ":" + seconds);
+        }
+    }
+    run();
+
+
+    //    run();
+
+
+</script>
+
+</body>
+</html>

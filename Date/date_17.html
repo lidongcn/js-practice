@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>根据出生年月计算age</title>
+</head>
+<body>
+
+<script>
+  function calculate_age(dt) {
+    var current = new Date();
+    var previous = new Date(dt);
+    return Math.ceil((current - previous + 1) / (86400000 * 365));
+  }
+
+  console.log(calculate_age(new Date(1982, 11, 4)));
+  console.log(calculate_age(new Date(1962, 1, 1)));
+</script>
+</body>
+</html>

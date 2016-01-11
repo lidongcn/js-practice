@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到本周开始日期</title>
+</head>
+<body>
+
+<script>
+  function startOfWeek (date){
+
+    var startDay = date.getDate() -date.getDay() +(date.getDay() === 0?-6 :1);
+
+    return new Date(date.setDate(startDay));
+  }
+
+  dt = new Date();
+  console.log(startOfWeek(dt));
+
+
+
+
+</script>
+
+</body>
+</html>

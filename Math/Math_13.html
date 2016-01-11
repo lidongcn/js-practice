@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    来测试一个数是不是2的x次方
+</p>
+<script>
+    function power(value) {
+        if (typeof value !== 'number') {
+            return false;
+        }
+
+        var i = 0;
+        for (i; i < value; i++) {
+            if (Math.pow(2, i) === value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    console.log(power(16));
+    console.log(power(18));
+    console.log(power(256));
+</script>
+
+</body>
+</html>

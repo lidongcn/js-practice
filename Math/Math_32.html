@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>生成一个随机的颜色值</P>
+<script>
+    function randomColor() {
+        var a = Math.ceil(Math.random() * 256);
+        var b = Math.ceil(Math.random() * 256);
+        var c = Math.ceil(Math.random() * 256);
+
+        var bgColor = 'rgb(' + a + ',' + b + ',' + c + ')';
+        console.log(bgColor);
+
+        document.body.style.backgroundColor = bgColor;
+    }
+
+    randomColor();
+</script>
+</body>
+</html>

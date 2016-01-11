@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    求两个数的最小公倍数
+</p>
+
+<script>
+    <!--最小的一个数成倍增加,若能对较大的数求余求尽,此数则为最小公倍数-->
+
+    function multiple(num1, num2) {
+
+        var minNum = Math.min(num1, num2),
+            maxNum = Math.max(num1, num2),
+                 i = 1,
+               mul = 0;
+
+        if (num1 === 0 || num2 === 0) {
+            return maxNum;
+        }
+
+        for (i; i < maxNum; i++) {
+            mul = minNum * i;
+            if (mul % maxNum === 0) {
+                return mul;
+            }
+        }
+    }
+
+    console.log(multiple(3, 15));
+    console.log(multiple(10, 15));
+
+</script>
+
+</body>
+</html>

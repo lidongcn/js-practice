@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>判断闰年</title>
+</head>
+
+
+<script>
+  //四年一闰，百年不闰，四百年一闰
+  year = prompt(" 输入年份: ");
+  if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
+    alert("是闰年")
+  } else {
+    alert("不是闰年")
+  }
+
+</script>
+
+
+</body>
+</html>

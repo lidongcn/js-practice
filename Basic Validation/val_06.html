@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+
+<p>写一个方法来判断value是否为一个正则对象</p>
+
+<script>
+
+
+    function is_RegExp(value) {
+
+        return toString.call(value) === '[object RegExp]';
+
+    }
+
+    console.log(is_RegExp(/wer/));
+    console.log(is_RegExp(12));
+    console.log(is_RegExp(true));
+</script>
+
+</body>
+</html>

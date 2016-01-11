@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>找出中间值</p>
+<script>
+
+    function searchValue(a, b, c) {
+        return a < b ? b : (a > c ? c : a);
+    }
+
+    console.log(searchValue(7, 1, 12));
+    console.log(searchValue(-7, 0, 12));
+    console.log(searchValue(15, 0, 12));
+
+</script>
+
+</body>
+</html>

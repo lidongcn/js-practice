@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>求出0到给定数字范围内的质数</P>
+
+<script>
+    function isPrime(n) {
+        var i, j, primes = [];
+
+        for (i = 1; i < n; i++) {
+
+            for (j = 2; j < i; j++) {
+
+                if (i % j === 0) {
+                    break;
+                }
+            }
+
+            if (i <= j && i != 1) {
+                primes.push(i);
+            }
+        }
+        return primes;
+    }
+    console.log(isPrime(15));
+    console.log(isPrime(24));
+</script>
+</body>
+</html>

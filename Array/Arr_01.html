@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>检查是否是一个数组</title>
+</head>
+<body>
+
+<script>
+  function isArray(input) {
+
+    return Object.prototype.toString.call(input) === "[object Array]";
+  }
+
+  console.log(isArray('w3resource'));
+  console.log(isArray([1, 2, 4, 0]));
+
+
+</script>
+</body>
+</html>

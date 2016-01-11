@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用dom来操作字体的大小和颜色</title>
+</head>
+<body>
+
+<p id='text'>JavaScript Exercises - w3resource</p>
+
+<div>
+    <button id="jsstyle" onclick="js_style()">Style</button>
+</div>
+
+<script>
+    function js_style() {
+
+        var text = document.getElementById("text");
+
+        text.style.fontSize = "20px";
+        text.style.color = "red";
+        text.fontFamily = "微软雅黑";
+    }
+</script>
+</body>
+</html>

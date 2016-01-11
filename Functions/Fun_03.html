@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--找到第一个不重复的字符-->
+<script>
+  function not_Repeat(str) {
+    var b = str.split(''),
+        result = '',
+        ctr = 0;
+    for (var x = 0; x < b.length; x++) {
+      ctr = 0;
+      for (var y = 0; y < b.length; y++) {
+        if (b[x] === b[y]) {
+          ctr += 1;
+        }
+      }
+      if (ctr < 2) {
+        result = b[x];
+        break;
+      }
+    }
+    return result;
+  }
+  console.log(not_Repeat('abacddbec'));
+
+</script>
+</body>
+</html>

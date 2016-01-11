@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>二进制查找</title>
+</head>
+<body>
+
+<script>
+  //  function Search(arr, val) {
+  //    var low = 0,
+  //        high = arr.length - 1,
+  //        mid = 0;
+  //    while (low <= high) {
+  //      mid = Math.floor((low + high) / 2);
+  //
+  //      if (arr[mid] == val) {
+  //        return mid;
+  //      }
+  //      else if (arr[mid] > val) {
+  //        high = mid - 1;
+  //      }
+  //      else {
+  //        low = mid + 1;
+  //      }
+  //    }
+  //    return false;
+  //  }
+
+  Array.prototype.search = function (val) {
+    var half = parseInt(this.length / 2);
+
+    if (val === this[half]) {
+      return half;
+    }
+    if (val > this[half]) {
+      return half + this.slice(half, this.length).search(val);
+    }
+    else {
+      return this.slice(0, half).search(val);
+    }
+  };
+
+
+  var arr = [1, 2, 5, 7, 8, 9, 11];
+  console.log(arr.search(8));
+
+</script>
+
+</body>
+</html>

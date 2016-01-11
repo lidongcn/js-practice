@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>列出js对象的属性名</title>
+</head>
+<body>
+<script>
+    var student = {
+        name: "David Rayy",
+        sclass: "VI",
+        rollno: 12
+    };
+
+    function allKeys(myobj) {
+        var keys = [];
+        for (var key in myobj) {
+            keys.push(key);
+        }
+
+        return keys;
+    }
+
+    console.log(allKeys(student));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    在数组当中找出最大数的公约数(在数组当中)
+</p>
+<script>
+
+    function gcd(numbers) {
+
+        if (Object.prototype.toString.call(numbers) !== '[object Array]') {
+            return false;
+        }
+
+        var a, b, len = numbers.length;
+
+        if (!len) {
+            return null;
+        }
+
+        a = numbers[0];
+        for (var i = 1; i < len; i++) {
+            b = numbers[i];
+            a = divisor(a, b);
+        }
+        return a;
+    }
+
+//  求两个数的最大公约数
+
+    function divisor(num1, num2) {
+
+        if (!num2) {
+            return num1;
+        }
+        return divisor(num2, num1 % num2);
+    }
+
+    console.log(gcd([3, 15, 27]));
+    console.log(gcd([5, 10, 15, 25]));
+
+</script>
+</body>
+</html>

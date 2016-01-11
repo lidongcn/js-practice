@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>获得该月的一天，两位数的话前面有0</title>
+</head>
+<body>
+
+<script>
+  function day_of_month(d) {
+
+    return (d.getDate() < 10 ? "0" : "") + d.getDate();
+  }
+
+  d = new Date();
+  console.log(day_of_month(d));
+
+  d = new Date(2015, 10, 6);
+  console.log(day_of_month(d));
+
+
+</script>
+
+
+</body>
+</html>

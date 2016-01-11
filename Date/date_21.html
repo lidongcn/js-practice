@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到一个月的最后一天</title>
+</head>
+<body>
+
+<script>
+  function endOfMouth(date) {
+// 下个月的第0天就是这个月的最后一天
+
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  }
+
+  dt = new Date;
+  console.log(endOfMouth(dt).toString());
+
+</script>
+
+</body>
+</html>

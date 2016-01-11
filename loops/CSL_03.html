@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>排序数字</title>
+</head>
+<body>
+
+<script>
+  function sortNumber(a, b, c) {
+    var arr = [a, b, c];
+    var result = arr.sort(function (a, b) {
+      return b - a;
+    });
+    alert(result);
+
+  }
+
+  sortNumber(0, -1, 4);
+
+</script>
+
+
+</body>
+</html>

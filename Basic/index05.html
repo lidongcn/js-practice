@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body onload="rotate()">
+
+<p id="test">w3resource</p>
+
+<script>
+
+  function rotate() {
+    var text = ["w", "3", "s", "c", "h", "o", "o", "l", "s", " "];
+
+    setInterval(function () {
+      var element = document.getElementById("test");
+      text1 = text.splice(0, 0, text.pop()) + text.join("");
+      element.innerHTML = text1;
+    }, 1000);
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试一个日期是否是周末</title>
+</head>
+<body>
+<p>测试一个日期是否是周末</p>
+<script>
+    var isWeekend = function (date1) {
+
+        var dt = new Date(date1);
+//    console.log(dt);
+        if (dt.getDay() == 6 || dt.getDay() == 0) {
+            return date1 + " is weekend";
+        }
+        return false;
+    };
+
+    console.log(isWeekend('Nov 15, 2014'));
+    console.log(isWeekend('Nov 16, 2014'));
+    console.log(isWeekend('Nov 17, 2014'));
+</script>
+
+</body>
+</html>

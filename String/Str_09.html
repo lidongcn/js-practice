@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>转换字母的大小写</title>
+</head>
+<body>
+
+<script>
+  function swapCase(Str){
+    return Str.replace(/([a-z]+)|([A-Z]+)/g,function(match, chr){
+      return chr ? match.toUpperCase() : match.toLowerCase();
+    });
+  }
+  console.log(swapCase('AabBd'));
+
+//  当字符串匹配到正则表达式（regular expression）时，match() 方法会提取匹配项。
+</script>
+
+
+</body>
+</html>

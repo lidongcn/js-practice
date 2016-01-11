@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>找出给定范围内的闰年</title>
+</head>
+<body>
+
+<script>
+// 四年一闰，百年不闰，四百年一闰
+
+  function leapYear(year) {
+
+    if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
+      return year;
+    } else {
+      return false;
+    }
+  }
+
+  function leap_year_range(st_year, end_year) {
+    var year_range = [];
+
+    for (var i = st_year; i <= end_year; i++) {
+      year_range.push(i);
+    }
+    var new_array = [];
+
+    year_range.forEach(
+        function (year) {
+          if (leapYear(year))
+            new_array.push(year);
+        }
+    );
+    return new_array;
+  }
+
+  console.log(leap_year_range(2000, 2012));
+
+</script>
+
+</body>
+</html>

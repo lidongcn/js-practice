@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>将度转换为弧度(1度=π/180弧度)</p>
+
+<script>
+    function convert(degrees) {
+        if (typeof degrees !== 'number') {
+            return false;
+        }
+        return degrees * ((Math.PI) / 180);
+    }
+
+    console.log(convert(1));
+    console.log(convert(45));
+</script>
+</body>
+</html>

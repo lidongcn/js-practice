@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查value是否为一个数字</title>
+</head>
+<body>
+<script>
+
+    function is_number(value)
+    {
+        return !isNaN(value) && toString.call(value) === '[object Number]';
+    }
+
+    console.log(is_number(NaN));
+
+    console.log(is_number(42.32));
+
+    console.log(is_number(72));
+</script>
+
+</body>
+</html>

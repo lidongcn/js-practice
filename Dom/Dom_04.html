@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get attributes value</title>
+</head>
+<body>
+<h2>get href</h2>
+<p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="http://www.w3resource.com/">w3resource</a>
+</p>
+<button onclick="getAttributes()">Click here to get attributes value</button>
+
+<script>
+    function getAttributes() {
+        var u = document.getElementById("w3r").href;
+//        console.log(u);
+        alert(u);
+        //类似的方法将其属性就可以取出来
+    }
+</script>
+
+</body>
+</html>

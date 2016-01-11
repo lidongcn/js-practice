@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click to set paragraph background color</title>
+</head>
+<body>
+<p>点击按钮改变背景颜色</p>
+<input type="button" id="btn" value="Click to set paragraph background color">
+
+<div>
+    <p>w3resource JavaScript Exercises</p>
+
+    <p>w3resource PHP Exercises</p>
+</div>
+<script>
+    function set_background() {
+        docBody = document.getElementsByTagName("div")[0];
+
+        myBodyElements = docBody.getElementsByTagName("p");
+
+        myp1 = myBodyElements[0];
+        myp1.style.background = "red";
+
+        myp2 = myBodyElements[1];
+        myp2.style.background = "green";
+    }
+
+    var button = document.getElementById('btn');
+    button.addEventListener('click',set_background,false);
+</script>
+
+</body>
+</html>

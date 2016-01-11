@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用正则表达式匹配给定字符串是否存在</title>
+</head>
+<body>
+
+<p>用正则表达式匹配给定字符串是否存在</p>
+
+<script>
+    function searchStr(str, target) {
+        var result = str.search(new RegExp(target, "i"));
+//    console.log(result);
+
+        if (result > 0)
+            return '该字符串存在';
+        else
+            return '该字符串不存在';
+    }
+
+    console.log(searchStr('JavaScript Exercises', 'exercise'));
+    console.log(searchStr('JavaScript Exercises', 'Exercises'));
+    console.log(searchStr('JavaScript Exercises', 'Exercisesss'));
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--计算一个字符串中元音字母的总个数-->
+<!--indexOf对大小写敏感,如果要检索的字符串值没有出现，则该方法返回 -1-->
+
+<script>
+
+  function vowels(str) {
+    var m = "aoeiuAOEIU",
+        count = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (m.indexOf(str[i]) !== -1) {
+        count += 1;
+      }
+    }
+    return count;
+  }
+  console.log(vowels("liDongTongXue"));
+</script>
+</body>
+</html>

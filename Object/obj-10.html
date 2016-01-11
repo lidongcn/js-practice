@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写一个js函数来打印出一个js对象的所有方法</title>
+</head>
+<body>
+<script>
+
+    function properties(obj) {
+
+        return Object.getOwnPropertyNames(obj);
+    }
+
+    console.log(properties(Math));
+    console.log(properties(Array));
+
+</script>
+
+</body>
+</html>

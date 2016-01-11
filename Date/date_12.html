@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>获得日期数组当中最小的一天</title>
+</head>
+<body>
+
+<script>
+  function min_date(all_dates){
+    var min_dt = all_dates[0],
+        min_diObj = new Date(all_dates[0]);
+
+    all_dates.forEach(function(dt){
+
+      if(new Date(dt)< min_diObj){
+        min_dt = dt;
+        min_diObj = new Date(dt);
+      }
+    });
+    return min_dt;
+  }
+
+
+  console.log(min_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+</script>
+
+</body>
+</html>

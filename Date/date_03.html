@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到当前月的天数</title>
+</head>
+<body>
+
+<script>
+
+  function getDaysInMonth(month, year) {
+
+    return new Date(year, month, 0).getDate();
+  }
+
+  console.log(getDaysInMonth(1, 2012));
+  console.log(getDaysInMonth(2, 2012));
+  console.log(getDaysInMonth(9, 2012));
+  console.log(getDaysInMonth(12, 2012));
+</script>
+
+</body>
+</html>

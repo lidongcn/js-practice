@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--输出每个字符在字符串中出现的次数。-->
+<!--\S   匹配任何空白字符，包括空格、制表符、换页符等等。-->
+<!--\g   全文匹配-->
+<script>
+  function charCounts(str) {
+    var result = {};
+    str.replace(/\S/g, function (l) {
+
+      result[l] = (isNaN(result[l]) ? 1 : result[l] + 1);
+    });
+    return result;
+  }
+
+  console.log(charCounts("The quick brown fox jumps over the lazy dog"));
+
+</script>
+
+</body>
+</html>

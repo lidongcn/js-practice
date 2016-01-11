@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    来判断一个value是不是整数
+</p>
+<script>
+
+    function isInt(value) {
+        if (typeof value !== 'number')
+            return false;
+
+        return !isNaN(value) && parseInt(value) == value;
+    }
+
+    console.log(isInt(23));
+    console.log(isInt(4e2));
+    console.log(isInt(NaN));
+    console.log(isInt(23.75));
+    console.log(isInt(-23));
+</script>
+
+</body>
+</html>

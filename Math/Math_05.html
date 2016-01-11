@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    格式化指定的小数位
+</p>
+
+<script>
+
+    function decimals(num,n){
+
+        return num.toFixed(n);
+    }
+
+    console.log(decimals(2.100212, 2));
+    console.log(decimals(2.100212, 3));
+    console.log(decimals(2100, 2));
+</script>
+
+</body>
+</html>

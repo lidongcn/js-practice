@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>返回一个数的平方根的整数</p>
+
+<script>
+    function squareRoot(num) {
+        if (typeof num !== 'number') {
+            return false;
+        }
+        return parseInt(Math.sqrt(num));
+    }
+
+    console.log(squareRoot(17));
+    console.log(squareRoot(15));
+</script>
+
+</body>
+</html>

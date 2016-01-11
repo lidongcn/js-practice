@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    判断value的值是不是char类型
+</p>
+<script>
+
+    function is_char(value)
+    {
+        if (Object.prototype.toString.call(value) !== '[object String]')
+            return false;
+        return value && value.length === 1;
+    }
+
+    console.log(is_char('f'));
+    console.log(is_char('*'));
+    console.log(is_char('123'));
+</script>
+
+</body>
+</html>

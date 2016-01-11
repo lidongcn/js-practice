@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计算今天到圣诞节还有多远</title>
+</head>
+<body>
+
+<script>
+  var today = new Date();
+  var Christmas = new Date(today.getFullYear(), 11, 25);
+
+  var oneday = 1000 * 60 * 60 * 24;
+  var untilChristmas = (Christmas - today) / oneday;
+  //    console.log(oneday);
+  console.log("还有" + Math.floor(untilChristmas) + "天就是圣诞节了");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>根据日期来获得当前的季度</title>
+</head>
+<body>
+
+<script>
+  function quarter_of_the_year(date) {
+    var month = date.getMonth() + 1,
+        result = Math.ceil(month / 3);
+
+    return (result);
+  }
+
+  console.log(quarter_of_the_year(new Date()));
+  console.log(quarter_of_the_year(new Date(2015, 1, 21)));
+  console.log(quarter_of_the_year(new Date(2015, 10, 18)));
+
+
+</script>
+</body>
+</html>

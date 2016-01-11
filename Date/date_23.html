@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到本周结束日期</title>
+</head>
+<body>
+
+<script>
+  function endOfWeek(date) {
+    var lastDay = date.getDate() - date.getDay()  + 7;
+//    console.log(lastDay);
+    return new Date(date.setDate(lastDay));
+  }
+
+  dt = new Date();
+  console.log(endOfWeek(dt));
+
+</script>
+
+</body>
+</html>

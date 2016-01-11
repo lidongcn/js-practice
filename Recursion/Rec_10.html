@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>快速排序</title>
+</head>
+<body>
+<!--首先任意选取一个数据（通常选用数组的第一个数）作为关键数据，-->
+<!--然后将所有比它小的数都放到它前面，所有比它大的数都放到它后面-->
+<script>
+
+  var quickSort = function (arr) {
+
+    if (arr.length <= 1) {
+      return arr;
+    }
+    var pivotIndex = Math.floor(arr.length / 2);
+    var pivot = arr.splice(pivotIndex, 1)[0];
+    var left = [];
+    var right = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] < pivot) {
+        left.push(arr[i]);
+      } else {
+        right.push(arr[i]);
+      }
+    }
+
+    return quickSort(left).concat([pivot], quickSort(right));
+  };
+
+  var a = [34, 7, 23, 32, 5, 62];
+  console.log(quickSort(a));
+
+</script>
+
+</body>
+</html>

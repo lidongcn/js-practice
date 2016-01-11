@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>匹配邮箱地址的正则表达式</P>
+<script>
+    /*
+     * ^匹配开始,$匹配结束
+     * *表示0个或多个前面的字符,n+ 匹配任何包含至少一个n的字符串。
+     * [-_.]?匹配0个或1'-''_''.'这种情况
+     * [a-z]{2,6} 匹配2个至6个英文字母
+     * ([\.][a-z]{2})?匹配.com.cn这种情况,加问号表示可能没有
+     */
+
+    function isEmail(Str) {
+//        var regexp = /^[a-z]([a-z0-9]*[-_.]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,6}([\.][a-z]{2})?$/i;
+        var regexp = /^[\w\d\-_.]+@([\w\d\-_]+)[.][\w]{2,6}([.][\w]{2})?$/;
+
+        if (regexp.test(Str)) {
+            return '邮箱验证合格';
+        } else {
+            return '不是正确的邮箱地址';
+        }
+    }
+    console.log(isEmail('lidong@sina.com'));
+    console.log(isEmail('123@sina'));
+</script>
+
+</body>
+</html>

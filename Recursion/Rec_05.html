@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>指数</title>
+</head>
+<body>
+
+
+<script>
+  function exponent(a, n) {
+    if (n === 0) {
+      return 1;
+    } else {
+      return a * exponent(a, n - 1);
+    }
+  }
+
+  console.log(exponent(8, 2));
+
+
+</script>
+
+</body>
+</html>

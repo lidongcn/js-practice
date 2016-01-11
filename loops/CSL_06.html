@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+
+<script>
+
+  var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+  var averageMarks = 0;
+
+  for (var i = 0; i < students.length; i++) {
+    averageMarks += students[i][1];
+    var avg = (averageMarks / students.length);
+  }
+
+  alert("平均分数是：" + avg);
+
+  if (avg < 60) {
+    alert("等级是 : F");
+  } else if (avg < 70) {
+    alert("等级是: D");
+  } else if (avg < 80) {
+    alert("等级是 : C");
+  } else if (avg < 90) {
+    alert("等级是 : B");
+  } else if (avg < 100) {
+    alert("等级是 : A");
+  }
+</script>
+
+</body>
+</html>

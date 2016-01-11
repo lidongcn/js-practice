@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>return values that are powers of two.</P>
+
+<script>
+    function power(value) {
+        if (typeof value !== 'number') {
+            return false;
+        }
+
+        var result = Math.log(value) / Math.log(2);
+
+        console.log(result);
+//        var i = 0;
+//        for (i; i < value; i++) {
+//            if (Math.pow(i, 2) === value) {
+//                return true;
+//            }
+//        }
+//        return false;
+    }
+
+    power(16);
+    power(18);
+    power(256);
+
+</script>
+
+</body>
+</html>

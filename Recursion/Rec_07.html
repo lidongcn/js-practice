@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>检查一个数是否是偶数</title>
+</head>
+<body>
+
+
+<script>
+  function check_even(num) {
+    if (num < 0) {
+      num = Math.abs(num);
+    }
+    if (num === 0) {
+      return true;
+    }
+    if (num === 1) {
+      return false;
+    } else {
+      num = num - 2;
+      return check_even(num);
+    }
+  }
+
+  console.log(check_even(23));
+  console.log(check_even(-22));
+
+</script>
+
+</body>
+</html>

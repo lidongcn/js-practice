@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计算两个数的乘除</title>
+</head>
+<body>
+<form>
+  1st Number : <input type="number" id="num1"><br>
+  2st Number : <input type="number" id="num2"><br>
+  <input type="button" onclick="a()" value="相乘"/>
+  <input type="button" onclick="b()" value="相除">
+</form>
+<p>
+  结果是:<span id="result"></span>
+</p>
+
+<script>
+  function a() {
+    num1 = document.getElementById('num1').value;
+    num2 = document.getElementById('num2').value;
+    document.getElementById('result').innerHTML = num1 * num2;
+  }
+  function b() {
+    num1 = document.getElementById('num1').value;
+    num2 = document.getElementById('num2').value;
+    document.getElementById('result').innerHTML = num1 / num2;
+  }
+</script>
+
+</body>
+</html>

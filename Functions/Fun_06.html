@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--找出字符串内最长的单词-->
+
+<script>
+  function findLongest(str) {
+    var a = str.split(" "),
+        b = a[0];
+    for (var i = 1; i < a.length; i++) {
+      if (b.length < a[i].length) {
+        b = a[i];
+      }
+      return b;
+    }
+  }
+  console.log(findLongest("Web Development Tutorial"));
+
+</script>
+</body>
+</html>

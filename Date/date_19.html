@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>根据指定日期判断出今天是星期几</title>
+</head>
+<body>
+
+<script>
+  Date.shortDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function shortDays(dt) {
+
+    return Date.shortDays[dt.getDay()];
+  }
+
+  dt = new Date();
+  console.log(shortDays(dt));
+
+  dt = new Date(2015, 10, 1);
+  console.log(shortDays(dt));
+
+
+</script>
+
+</body>
+</html>

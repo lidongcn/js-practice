@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<p>验证该字符串是否为16进制</p>
+<script>
+    // 16进制它由0-9，A-F组成，字母不区分大小写的字符串。
+    var str1 = '4ccc44';
+    var str2 = 'fm4432';
+
+    var regexp = /^[\da-f]+$/i;
+
+    console.log(regexp.test(str1));
+    console.log(regexp.test(str2));
+
+
+</script>
+</body>
+</html>

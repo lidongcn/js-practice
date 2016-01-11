@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>求最大公约数</title>
+</head>
+<body>
+
+<script>
+  //  递归方法
+  //  var divisor = function (num1, num2) {
+  //
+  //    if (!num2) {
+  //      return num1;
+  //    }
+  ////    console.log(num1,num2);
+  //    return divisor(num2, num1 % num2);
+  //  };
+  //
+  //  console.log(divisor(2154, 458));
+  var a = 2154,
+      b = 458,
+      divisor;
+
+  while (a != b) {
+    if (a > b) {
+      a = a - b;
+    } else {
+      b = b - a;
+    }
+  }
+  divisor = a;
+  console.log(divisor);
+
+</script>
+
+</body>
+</html>

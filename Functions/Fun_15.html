@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--得到函数名-->
+<!--arguments.callee是一个指向正在执行的函数的指针-->
+<!--但在严格模式下，不能通过脚本访问arguments.callee-->
+<script>
+  function getName() {
+    console.log(arguments.callee.name);
+  }
+
+  getName();
+
+</script>
+
+</body>
+</html>

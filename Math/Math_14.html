@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    将小数舍入到给定的小数位
+</p>
+<script>
+
+    function round(num,base){
+
+        return num.toFixed(base);
+    }
+
+    console.log(round(12.375,2));
+    console.log(round(12.37499,2));
+    console.log(round(-10.3079499, 3));
+</script>
+
+</body>
+</html>

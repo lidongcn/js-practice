@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add rows to a table</title>
+</head>
+<body>
+<table id="sampleTable" border="1">
+    <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+    </tr>
+
+    <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+    </tr>
+</table>
+<br>
+
+<input type="button" id="btn" value="Insert row">
+
+<script>
+    function insert_Row() {
+        var x = document.getElementById('sampleTable').insertRow();
+        var y = x.insertCell(0);
+        var z = x.insertCell(1);
+        y.innerHTML = "row3 cell1";
+        z.innerHTML = "row3 cell2";
+    }
+    var button = document.getElementById('btn');
+    button.addEventListener('click', insert_Row, false);
+</script>
+
+</body>
+</html>

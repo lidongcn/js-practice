@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--写一个值来判断value是否为一个纯json对象-->
+<script>
+    function is_json(value) {
+
+//        return toString.call(value) === '[object object]';
+        return Object.prototype.toString.call(value) === '[object Object]';
+
+    }
+
+    console.log(is_json({name: 'Robert'}));
+    console.log(is_json('bar'));
+    console.log(is_json(72));
+
+
+</script>
+</body>
+</html>

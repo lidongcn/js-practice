@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>判断一个字符串中是否包含日期格式(年月日)的字符串</P>
+<script>
+
+    //此处正则有待完善,因为牵扯到闰年等问题,还没有想清楚怎么写,后续再完善.这里只能大致判断出是否为年月日的格式,例如:2008.08.08
+
+    function searchDate(Str) {
+        var regexp = /[\d]{4}[.][\d]{1,2}[.][\d]{1,2}/g;
+
+        if (regexp.test(Str)) {
+            console.log(Str.match(regexp));
+            return '该字符串中包含日期格式的字符串';
+        } else {
+
+            return '该字符串中不包含日期格式的字符串';
+        }
+    }
+    console.log(searchDate('li2015.12.4dong'));
+    console.log(searchDate('li dong2012'));
+
+</script>
+
+</body>
+</html>

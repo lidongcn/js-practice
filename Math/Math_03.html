@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    将十进制数转换为二进制,十六进制或者八进制
+</p>
+<script>
+
+    function convert(n, base) {
+
+        switch (base) {
+            case 'B':
+                return parseInt(n).toString(2);
+                break;
+            case 'H':
+                return parseInt(n).toString(16);
+                break;
+            case 'O':
+                return parseInt(n).toString(8);
+                break;
+            default:
+                return false;
+        }
+    }
+
+    console.log(convert(120, 'B'));
+    console.log(convert(120, 'H'));
+    console.log(convert(120, 'O'));
+
+
+</script>
+</body>
+</html>

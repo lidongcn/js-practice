@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>接受一个数字，将它相邻偶数之间用破折号隔开</title>
+</head>
+<body>
+
+<script>
+
+  var num = window.prompt();
+  var str = num.toString();
+  var result = [str[0]];
+
+  for (var i = 1; i < str.length; i++) {
+
+    if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+      result.push("-", str[i]);
+    } else {
+      result.push(str[i]);
+    }
+  }
+
+  alert(result.join(""));
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang=zh-CN>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<P>去除一个字符串首末端的空白字符</P>
+<script>
+    var str = " how are you  ";
+    var regexp = /^\s+|\s+$/g;
+
+    console.log(str.replace(regexp, ''));
+</script>
+</body>
+</html>

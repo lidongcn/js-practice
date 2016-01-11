@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算一个球的体积</title>
+</head>
+<body>
+
+<p>计算一个球的体积</p>
+
+<form action="" method="post" id="MyForm">
+    <label for="radius">Radius</label><input type="text" name="radius" id="radius" required><br>
+    <label for="volume">Volume</label><input type="text" name="volume" id="volume"><br>
+
+    <input type="submit" value="Calculate" id="submit">
+</form>
+
+<script>
+
+    function volume_sphere() {
+        var volume,
+            radius = document.getElementById('radius').value;
+
+        radius = Math.abs(radius);
+        volume = ((4 / 3) * Math.PI * Math.pow(radius, 3)).toFixed(4);
+        document.getElementById('volume').value = volume;
+
+        return false;
+    }
+    window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--取出一个数组中第二小和第二大的数字-->
+
+<script>
+  function a(num) {
+    num.sort(function (x, y) {
+      return x - y;
+    });
+    var a = [num[0]], result = [];
+
+    for (var j = 1; j < num.length; j++) {
+      if (num[j - 1] !== num[j]) {
+        a.push(num[j]);
+      }
+    }
+    result.push(a[1], a[a.length - 2]);
+    return result.join(',');
+  }
+  console.log(a([1,3,2,4,55,44]));
+</script>
+</body>
+</html>

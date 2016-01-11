@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>改变每个字符的大小写</title>
+</head>
+<body>
+
+<script>
+  str = window.prompt();
+  var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+  var result = [];
+
+  for (var i = 0; i < str.length; i++) {
+
+    if (UPPER.indexOf(str[i]) !== -1) {
+      result.push(str[i].toLowerCase());
+    } else if (LOWER.indexOf(str[i]) !== -1) {
+      result.push(str[i].toUpperCase());
+    } else {
+      result.push(str[i]);
+    }
+  }
+
+  alert(result.join(''));
+
+
+</script>
+
+</body>
+</html>

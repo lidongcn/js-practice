@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title> V = πr2h</title>
+</head>
+<body>
+<p>计算圆柱的体积(V = πr2h)</p>
+
+<script>
+
+    function volume(height, diameter) {
+        var radius = diameter / 2;
+        return Math.PI * radius * radius * height;
+    }
+
+    console.log('volume =', volume(7, 4).toFixed(4));
+
+</script>
+
+</body>
+</html>

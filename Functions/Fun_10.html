@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--n行n列的矩阵-->
+
+<script>
+  function matrix(num) {
+    var i, j;
+    for (i = 0; i < num; i++) {
+      var arr = [];
+      for (j = 0; j < num; j++) {
+        if (i === j) {
+          arr.push(1);
+        } else {
+          arr.push(0);
+        }
+      }
+      console.log(arr);
+    }
+  }
+  matrix(4);
+</script>
+</body>
+</html>

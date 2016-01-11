@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序法</title>
+</head>
+<body>
+<p>冒泡排序法</p>
+<script>
+
+    function bubbleSort(arr) {
+        var isSorted = false;
+
+        while (!isSorted) {
+            isSorted = true;
+            for (var i = 0; i < arr.length - 1; i++) {
+
+                if (arr[i] > arr[i + 1]) {
+                    var x = arr[i + 1];
+                    arr[i + 1] = arr[i];
+                    arr[i] = x;
+
+                    isSorted = false;
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log(bubbleSort([6, 4, 0, 3, -2, 1]));
+
+</script>
+</body>
+</html>

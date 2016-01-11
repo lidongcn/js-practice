@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>求给定范围内的整数</title>
+</head>
+<body>
+<!--get the integers in range (x, y)-->
+<script>
+  //  function range(num1, num2) {
+  //    var a = [];
+  //    for (var i = num1 + 1; i < num2; i++) {
+  //      a.push(i)
+  //    }
+  //    return a;
+  //  }
+  var range = function (num1, num2) {
+
+    if (num2 - num1 === 2) {
+      return [num1 + 1];
+    } else {
+      var list = range(num1, num2 - 1);
+      list.push(num2 - 1);
+      return list;
+    }
+  };
+
+  console.log(range(2, 9));
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!--Write a JavaScript function which says whether a number is perfect.-->
+
+<script>
+  function perfect(num){
+    var temp = 0;
+    for (var i=1;i<=num/2;i++){
+      if(num%i === 0){
+        temp += i;
+      }
+    }
+    console.log(temp);
+    if(temp === num){
+      alert("perfect number");
+    }else{
+      alert("not a perfect number");
+    }
+  }
+
+  perfect(6);
+</script>
+</body>
+</html>

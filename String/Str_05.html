@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>将字符串进行缩写</title>
+</head>
+<body>
+<script>
+  function convertAdd(Str) {
+    convertStr = Str.split(' ');
+    console.log(convertStr);
+
+    if (convertStr.length > 1) {
+      return convertStr[0] + ' ' + convertStr[1].charAt(0);
+    }
+    return convertStr[0];
+  }
+
+  console.log(convertAdd("Robin Singh lalal"));
+
+
+</script>
+
+</body>
+</html>

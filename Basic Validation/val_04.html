@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查value是不是一个对象</title>
+</head>
+<body>
+<script>
+    //    Write a JavaScript function to validate whether a given value is object or not.
+
+    function is_object(value) {
+
+        var datatype = typeof value;
+        return datatype === 'function' || datatype === 'object' && !!value;
+    }
+
+    console.log(is_object({name: 'Robert'}));
+    console.log(is_object('bar'));
+    console.log(is_object(72));
+</script>
+
+</body>
+</html>

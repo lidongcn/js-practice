@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>求数组当中元素的总和</title>
+</head>
+<body>
+
+<script>
+//  Write a JavaScript program to compute the sum of an array of integers
+
+//  function array_Sum(array) {
+//    var count = 0;
+//    for (var i = 0; i < array.length; i++) {
+//      count += array[i];
+//    }
+//    return count;
+//}
+
+  function array_Sum(array){
+    if(array.length ===1){
+      return array[0];
+    }else{
+      return array.pop() + array_Sum(array);
+    }
+  }
+
+  var array = [1, 2, 3, 4, 5, 6];
+  console.log(array_Sum(array));
+</script>
+
+</body>
+</html>

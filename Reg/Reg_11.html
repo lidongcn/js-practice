@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>验证是否为颜色值的正则表达式</p>
+<script>
+    // 颜色值有两种格式#FFFFFF, RGB（255,255,255)
+    // 网页颜色是以16进制代码表示，一般格式为#DEFABC （字母范围从A-F,数字从0-9 ）
+
+    var str1 = '#4ccc44';
+    var regexp1 = /^#[\da-f]+$/i;
+
+    console.log(regexp1.test(str1));
+
+
+
+    // regexp2参考IP验证,只需将0-255的正则加上逗号重复两次,第三段再来一次,往前面加上[rR][gG][bG],便可得到Rgb的正则表达式
+
+    var regexp2 = /[rR][gG][bB][\(]((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))[,]){2}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))[\)]/;
+
+    console.log(regexp2.test('RGB(128,156,254)'));
+
+
+</script>
+
+</body>
+</html>

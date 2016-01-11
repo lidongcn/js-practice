@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>猜数字</title>
+</head>
+<body>
+
+
+<script>
+  var number = Math.ceil(Math.random() * 10);
+  var guessNumber = prompt("请输入你猜的数字");
+  if (number === guessNumber) {
+    alert("猜对了");
+  } else {
+    alert("猜错了，数字是" + number);
+  }
+</script>
+
+</body>
+</html>

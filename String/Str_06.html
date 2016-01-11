@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对电子邮件的地址进行隐藏</title>
+</head>
+<body>
+<p>对电子邮件的地址进行隐藏</p>
+<script>
+//  stringObject.substring(start,stop)
+
+  function hideEmail(userEmail) {
+    var avg,
+        split,
+        part1,
+        part2;
+    split = userEmail.split("@");
+    part1 = split[0];
+    avg = part1.length / 2;
+    part1 = part1.substring(0, (part1.length - avg));
+    part2 = split[1];
+    return part1 + "...@" + part2;
+  }
+
+  console.log(hideEmail("li_dong@sina.com"));
+
+
+</script>
+
+</body>
+</html>

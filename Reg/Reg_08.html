@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>验证是否为一个时间格式的字符串</p>
+<script>
+    function isTimeString(Str) {
+        var regexp = /^(2[0-3]|1[\d]|[\d]):([0-5]?[\d]):([0-5]?[\d])$/;
+
+        if (regexp.test(Str)) {
+            return '符合时间的格式';
+        } else {
+            return '不符合时间的格式';
+        }
+    }
+    console.log(isTimeString('19:58:59'));
+    console.log(isTimeString('80:15:64'));
+</script>
+</body>
+</html>

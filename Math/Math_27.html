@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>将弧度转换为度(1度=π/180弧度)</p>
+
+<script>
+    function convert(radians) {
+        if (typeof radians !== 'number') {
+            return false;
+        }
+        return radians / ((Math.PI) / 180);
+    }
+
+    console.log(convert(0.7853981633974483));
+</script>
+</body>
+</html>

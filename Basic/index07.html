@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>判断2014年到2050年哪些年的1月1日是星期日</title>
+</head>
+<body>
+
+<script>
+  for (var year = 2014; year <= 2050; year++) {
+    var pcc = new Date(year, 0, 1);
+    if (pcc.getDay() === 0) {
+      console.log(year);
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>extract unique</title>
+</head>
+<body>
+<!--unique characters from a string.-->
+<!--indexOf对大小写敏感,如果要检索的字符串值没有出现，则该方法返回 -1-->
+
+<script>
+    function unique_char(str){
+      var unique ="";
+      for(var i=0;i<str.length;i++){
+        if(unique.indexOf(str[i]) ==-1){
+          unique +=str[i];
+        }
+      }
+      return unique;
+    }
+  console.log(unique_char("thequickbrownfoxjumpsoverthelazydog"));
+
+</script>
+</body>
+</html>

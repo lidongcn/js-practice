@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P>
+    判断一个value当中是否包含数字
+</P>
+<script>
+    function isNumeric(num){
+
+        return !isNaN(parseFloat(num)) && isFinite(num);
+    }
+
+    console.log(isNumeric(12));
+    console.log(isNumeric('abcd'));
+    console.log(isNumeric('12'));
+    console.log(isNumeric(' '));
+    console.log(isNumeric(1.20));
+    console.log(isNumeric(-200));
+
+</script>
+</body>
+</html>

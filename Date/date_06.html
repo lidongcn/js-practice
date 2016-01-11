@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>将指定的分钟添加到Data对象当中</title>
+</head>
+<body>
+
+<script>
+  var add_minutes = function(date,minutes){
+      return new Date(date.getTime() + minutes*60*1000);
+  };
+
+  console.log(add_minutes(new Date(2014,10,2), 30).toString());
+</script>
+
+</body>
+</html>

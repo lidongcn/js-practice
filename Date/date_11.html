@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获得日期数组当中最大的一天</title>
+</head>
+<body>
+<p>获得日期数组当中最大的一天</p>
+<script>
+    function maxDate(allDates) {
+        var max_dt = allDates[0],
+                max_dtObj = new Date(allDates[0]);
+
+        allDates.forEach(function (dt) {
+
+            if (new Date(dt) > max_dtObj) {
+                max_dt = dt;
+                max_dtObj = new Date(dt);
+            }
+        });
+        return allDates + "中最大的一天是" + max_dt;
+    }
+
+    console.log(maxDate(['2015/02/01', '2015/02/02', '2015/01/03']));
+</script>
+
+</body>
+</html>

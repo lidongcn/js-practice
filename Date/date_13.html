@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>return the number of minutes in hours and minutes</title>
+</head>
+<body>
+
+<script>
+
+  function timeTransform(time) {
+    var hours = time / 60,
+        rHours = Math.floor(hours),
+        rMinutes = Math.round((hours - rHours) * 60);
+
+    return time + " minutes = " + rHours + " hour(s) and " + rMinutes + " minute(s).";
+  }
+
+  console.log(timeTransform(220));
+  console.log(timeTransform(200));
+
+</script>
+
+</body>
+</html>

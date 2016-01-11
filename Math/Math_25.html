@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>calculate the percentage (%) of a number.</p>
+
+<script>
+    function percentage(num, per) {
+        if (typeof num !== 'number' || typeof per !== 'number') {
+            return false;
+        }
+        return num * (per / 100);
+    }
+
+    console.log(percentage(1000, 47.99));
+</script>
+</body>
+</html>

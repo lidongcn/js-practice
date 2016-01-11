@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>得到当前的时间</title>
+</head>
+<body>
+
+<script>
+
+  function curDay(a) {
+    var day = new Date(),
+        yyyy = day.getFullYear(),
+        mm = day.getMonth() + 1,
+        dd = day.getDate();
+    console.log(mm + a + dd + a + yyyy);
+  }
+
+  curDay("/");
+  curDay("-");
+
+</script>
+
+</body>
+</html>
